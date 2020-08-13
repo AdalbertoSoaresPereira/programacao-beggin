@@ -1,0 +1,91 @@
+
+
+:root { /*root é o elemento raiz do documento, tudo feito aqui altera o resultado no projeto*/
+        --color-background: #F0F0F7;/*variavésis no css*/
+        --color-primary-lighter: #9871F5;
+        --color-primary-light: #916BEA;
+        --color-primary: #8257E5;
+        --color-primary-dark: #774DD6;
+        --color-primary-darker: #6842c2;
+        --color-secondary: #04D361;
+        --color-secondary-dark: #04BF58;
+        --color-title-in-primary: #FFFFFF;
+        --color-text-in-primary: #D4C2FF;
+        --color-text-title: #32264D;
+        --color-text-complement: #9C98A6;
+        --color-text-base: #6A6180;
+        --color-line-in-white: #E6E6F0;
+        --color-input-background: #F8F8FC;
+        --color-button-text: #FFFFFF;
+        --color-box-base: #FFFFFF;
+        --color-box-footer: #FAFAFC;
+        --color-small-info: #C1BCCC;
+        /*tamanho da fonte padrão:16px - 100% - 1rem*/
+        font-size: 60%; /*controle das medidas rem (rem é uma unidade de medida)*/
+        /*o rem é relativo ao tamanho da fonte setado no root, se o tamanho da fonte no root 
+        for de 100%, vai equivaler a 16px e por tabela o rem também será 16px ou 100%
+        rem significa - Root EleMent - rem*/
+    }
+
+    *{ /* o asterisco não tem uma função específica, pode ser usando de forma universal*/
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        /* essa configuração reseta as configurações dentro da body */            
+
+}
+
+
+    html,body{ height: 100vh;}/*vh é a unidade medida para altera a altura da aréa visível do 
+                                body */
+
+    body{
+            
+            background-color: var(--color-background);
+            display: flex;/*o display muda o comportamento padrao das tags dentro do html
+                           por exemplo, as tags h1, h2 e etc, ocupam o espaçamento de uma linha
+                           inteira, e não deixam elementos ao seu lado, já a tag "a" e/ou a tag
+                           span ocupam espaços menores permitindo elementos ao seu lado, o display
+                           flex altera esse comportamento natural das tags dentro do html */
+            align-items: center;
+            justify-content: center;
+    }
+
+      body,
+      input,
+      button,
+      textarea { 
+             font-weight: 500;
+             font-family: Poppins;
+             font-size: 1.6rem;
+             color: var(--color-text-base);   
+      }
+
+      /*
+        box model (padrão):
+        border: 1px solid red;
+        padding: 40 px; o padding é o preenchimento interno da box, quando o valor não é
+                        específicado em 4 valores na mesma linha, o único valor específicado
+                        vale para as as 4 bordas internas.
+        margin: 60px;  o margin vale para as bordas externas e os valores equivalem ao mesmo 
+                        do padding.
+
+        width: 300px;
+        height: 300px;   
+      
+      */
+
+
+
+        #container{   /*box model, ou modelo de caixa*/
+
+            width: 90vw;/*vw - view width- área visível da largura do body. */
+            max-width: 700px; /*largura máxima da box do body*/
+       }
+@media (min-width: 700px){         
+        :root{
+                font-size: 62,5%; /*todo 1rem vai ser relativo a 10px*/
+        }     
+}
